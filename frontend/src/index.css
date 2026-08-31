@@ -1,0 +1,76 @@
+:root { 
+  --bg: #1e1e24; 
+  --panel: #2b2b36; 
+  --text: #f8f9fa; 
+  --accent: #007bff; 
+  --success: #28a745; 
+  --danger: #dc3545; 
+  --warning: #ffc107; 
+}
+body { 
+  margin: 0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background: var(--bg); 
+  color: var(--text); 
+}
+.hmi-app { 
+  max-width: 900px; 
+  margin: 2rem auto; 
+  background: var(--panel); 
+  border-radius: 8px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+  overflow: hidden; 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 80vh; 
+}
+.hmi-header { 
+  background: #15151a; 
+  padding: 1.5rem; 
+  border-bottom: 2px solid #3d3d4d; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+.stage-container { 
+  padding: 2rem; 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+}
+.instruction-card { 
+  background: #3d3d4d; 
+  padding: 2rem; 
+  border-radius: 8px; 
+  margin: 2rem 0; 
+  width: 100%; 
+  max-width: 500px; 
+}
+.btn { 
+  display: inline-block; 
+  padding: 1.2rem 2rem; 
+  font-size: 1.2rem; 
+  font-weight: bold; 
+  color: #fff; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: 0.2s; 
+  width: 100%; 
+  margin-top: 1.5rem; 
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn.primary { background: var(--accent); } 
+.btn.success { background: var(--success); } 
+.btn.danger { background: var(--danger); }
+.progress-text { margin-top: 1rem; font-size: 1.1rem; color: #aaa; }
+.badge { padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem; }
+.badge.ready { background: var(--success); } 
+.badge.running { background: var(--warning); color: #000; } 
+.badge.stopped { background: var(--danger); }
+
+@media(max-width: 768px) { 
+  .hmi-app { margin: 0; min-height: 100vh; border-radius: 0; } 
+}
